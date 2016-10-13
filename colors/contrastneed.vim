@@ -1,6 +1,6 @@
 " 'contrastneed.vim' -- Vim color scheme.
 " Maintainer:   acg (acg@albertocg.com)
-" Description:  srcery theme fork. 
+" Description:  srcery theme fork. Dark colorscheme using 16 color palette
 
 if version > 580
   hi clear
@@ -187,7 +187,7 @@ if version >= 700
   hi! link TabLine TabLineFill
 
   " Match paired bracket under the cursor
-  call s:HL('MatchParen', s:yellow, s:bright_black, s:bold)
+  call s:HL('MatchParen', s:red, s:black, s:bold)
 endif
 
 if version >= 703
@@ -198,7 +198,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:black)
+  call s:HL('CursorLineNr', s:red, s:black)
 endif
 
 hi! link NonText contrastneedGrayAlt
@@ -212,11 +212,11 @@ call s:HL('IncSearch', s:black, s:yellow)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:white, s:bright_black)
+call s:HL('StatusLine',   s:red, s:black, s:bold)
 call s:HL('StatusLineNC', s:gray, s:black, s:underline)
 
 " The column separating vertically split windows
-call s:HL('VertSplit', s:white, s:black)
+call s:HL('VertSplit', s:red, s:black)
 
 " Current match in wildmenu completion
 call s:HL('WildMenu', s:blue, s:black, s:bold)
@@ -230,9 +230,9 @@ hi! link Title contrastneedGreenBold
 " Error messages on the command line
 call s:HL('ErrorMsg',   s:white, s:red)
 " More prompt: -- More --
-hi! link MoreMsg contrastneedYellowBold
+hi! link MoreMsg contrastneedRedBold
 " Current mode message: -- INSERT --
-hi! link ModeMsg contrastneedYellowBold
+hi! link ModeMsg contrastneedRedBold
 " 'Press enter' prompt and yes/no questions
 hi! link Question contrastneedOrangeBold
 " Warning messages
@@ -269,7 +269,7 @@ hi! link lCursor Cursor
 
 hi! link Special contrastneedOrange
 
-call s:HL('Comment', s:gray, s:none, s:italic)
+call s:HL('Comment', s:gray, s:black, s:italic . s:bold)
 call s:HL('Todo', s:white, s:black, s:bold . s:italic)
 call s:HL('Error', s:red, s:black, s:bold . s:inverse)
 
